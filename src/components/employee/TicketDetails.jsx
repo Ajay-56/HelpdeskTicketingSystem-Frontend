@@ -19,7 +19,7 @@ const TicketDetails = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/employee/tickets/${ticketId}`,
+        `https://helpdeskticketingsystem.onrender.com/api/employee/tickets/${ticketId}`,
         {
           headers: getAuthHeaders()
         }

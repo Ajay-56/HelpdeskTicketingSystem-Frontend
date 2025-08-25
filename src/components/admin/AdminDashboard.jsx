@@ -14,7 +14,7 @@ const AdminDashboard = () => {
   const fetchKpis = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8080/api/admin/dashboard/kpis', {
+      const response = await fetch('https://helpdeskticketingsystem.onrender.com/api/admin/dashboard/kpis', {
         method: 'GET',
         headers: getAuthHeaders(),
       });

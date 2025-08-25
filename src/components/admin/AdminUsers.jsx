@@ -29,7 +29,7 @@ const AdminUsers = () => {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8080/api/admin/users', {
+      const response = await fetch('https://helpdeskticketingsystem.onrender.com/api/admin/users', {
         method: 'GET',
         headers: getAuthHeaders(),
       });
@@ -69,7 +69,7 @@ const AdminUsers = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('http://localhost:8080/api/admin/users', {
+      const response = await fetch('https://helpdeskticketingsystem.onrender.com/api/admin/users', {
         method: 'POST',
         headers: getAuthHeaders(),
         body: JSON.stringify(newUser),
@@ -99,7 +99,7 @@ const AdminUsers = () => {
   const handleDeleteUser = async (userId, userName) => {
     if (window.confirm(`Are you sure you want to delete user "${userName}"?`)) {
       try {
-        const response = await fetch(`http://localhost:8080/api/admin/users/${userId}`, {
+        const response = await fetch(`https://helpdeskticketingsystem.onrender.com/api/admin/users/${userId}`, {
           method: 'DELETE',
           headers: getAuthHeaders(),
         });

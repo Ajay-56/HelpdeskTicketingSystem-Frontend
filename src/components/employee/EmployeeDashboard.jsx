@@ -21,7 +21,7 @@ const EmployeeDashboard = () => {
   const fetchDashboardData = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8080/api/employee/tickets', {
+      const response = await fetch('https://helpdeskticketingsystem.onrender.com/api/employee/tickets', {
         headers: getAuthHeaders()
       });
 

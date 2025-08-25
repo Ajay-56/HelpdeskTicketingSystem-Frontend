@@ -45,7 +45,7 @@ const EmployeeTickets = () => {
       if (filters.sort) queryParams.append('sort', filters.sort);
 
       const response = await fetch(
-        `http://localhost:8080/api/employee/tickets?${queryParams.toString()}`,
+        `https://helpdeskticketingsystem.onrender.com/api/employee/tickets?${queryParams.toString()}`,
         {
           headers: getAuthHeaders()
         }

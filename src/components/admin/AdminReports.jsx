@@ -38,7 +38,7 @@ const AdminReports = () => {
         endDate: dateRange.endDate + 'T23:59:59'
       });
 
-      const response = await fetch(`http://localhost:8080/api/admin/dashboard/agent-reports?${params}`, {
+      const response = await fetch(`https://helpdeskticketingsystem.onrender.com/api/admin/dashboard/agent-reports?${params}`, {
         method: 'GET',
         headers: getAuthHeaders(),
       });
@@ -59,7 +59,7 @@ const AdminReports = () => {
         endDate: dateRange.endDate + 'T23:59:59'
       });
 
-      const response = await fetch(`http://localhost:8080/api/admin/dashboard/submission-trends?${params}`, {
+      const response = await fetch(`https://helpdeskticketingsystem.onrender.com/api/admin/dashboard/submission-trends?${params}`, {
         method: 'GET',
         headers: getAuthHeaders(),
       });

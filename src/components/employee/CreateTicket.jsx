@@ -64,7 +64,7 @@ const CreateTicket = () => {
       setLoading(true);
       setError('');
       
-      const response = await fetch('http://localhost:8080/api/employee/tickets/create', {
+      const response = await fetch('https://helpdeskticketingsystem.onrender.com/api/employee/tickets/create', {
         method: 'POST',
         headers: getAuthHeaders(),
         body: JSON.stringify(formData)

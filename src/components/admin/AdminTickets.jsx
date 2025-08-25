@@ -34,7 +34,7 @@ const AdminTickets = () => {
 
   const fetchTickets = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/admin/tickets', {
+      const response = await fetch('https://helpdeskticketingsystem.onrender.com/api/admin/tickets', {
         method: 'GET',
         headers: getAuthHeaders(),
       });
@@ -50,7 +50,7 @@ const AdminTickets = () => {
 
   const fetchAgents = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/admin/users/agents', {
+      const response = await fetch('https://helpdeskticketingsystem.onrender.com/api/admin/users/agents', {
         method: 'GET',
         headers: getAuthHeaders(),
       });
@@ -66,7 +66,7 @@ const AdminTickets = () => {
 
   const fetchWorkload = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/admin/dashboard/agent-workload', {
+      const response = await fetch('https://helpdeskticketingsystem.onrender.com/api/admin/dashboard/agent-workload', {
         method: 'GET',
         headers: getAuthHeaders(),
       });
@@ -84,7 +84,7 @@ const AdminTickets = () => {
     if (!selectedTicket || !selectedAgent) return;
 
     try {
-      const response = await fetch(`http://localhost:8080/api/admin/tickets/${selectedTicket.id}/reassign`, {
+      const response = await fetch(`https://helpdeskticketingsystem.onrender.com/api/admin/tickets/${selectedTicket.id}/reassign`, {
         method: 'PUT',
         headers: getAuthHeaders(),
         body: JSON.stringify({ newAgentId: parseInt(selectedAgent) }),

@@ -1,7 +1,7 @@
 // src/services/authService.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api/auth'; // Ensure this matches your backend URL
+const API_BASE_URL = 'https://helpdeskticketingsystem.onrender.com/api/auth'; // Ensure this matches your backend URL
 
 const authService = {
   forgotPassword: async (email) => {

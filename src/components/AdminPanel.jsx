@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAuth } from "../auth/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:8080/api/admin";
+const API_URL = "https://helpdeskticketingsystem.onrender.com/api/admin";
 
 const AdminPanel = () => {
   const { auth, logout } = useAuth();

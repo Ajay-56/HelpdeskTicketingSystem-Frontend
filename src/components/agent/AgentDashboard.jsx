@@ -22,13 +22,13 @@ const AgentDashboard = () => {
       setLoading(true);
       
       // Fetch all tickets
-      const allTicketsResponse = await fetch('http://localhost:8080/api/agent/tickets', {
+      const allTicketsResponse = await fetch('https://helpdeskticketingsystem.onrender.com/api/agent/tickets', {
         headers: getAuthHeaders()
       });
       const allTickets = await allTicketsResponse.json();
       
       // Fetch my tickets
-      const myTicketsResponse = await fetch('http://localhost:8080/api/agent/my-tickets', {
+      const myTicketsResponse = await fetch('https://helpdeskticketingsystem.onrender.com/api/agent/my-tickets', {
         headers: getAuthHeaders()
       });
       const myTickets = await myTicketsResponse.json();

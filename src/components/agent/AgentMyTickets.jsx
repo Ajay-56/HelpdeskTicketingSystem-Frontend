@@ -34,7 +34,7 @@ const AgentMyTickets = () => {
         if (value) queryParams.append(key, value);
       });
 
-      const response = await fetch(`http://localhost:8080/api/agent/my-tickets?${queryParams}`, {
+      const response = await fetch(`https://helpdeskticketingsystem.onrender.com/api/agent/my-tickets?${queryParams}`, {
         headers: getAuthHeaders()
       });
       
@@ -61,7 +61,7 @@ const AgentMyTickets = () => {
     
     try {
       setActionLoading(true);
-      const response = await fetch(`http://localhost:8080/api/agent/my-tickets/${selectedTicket.id}/status`, {
+      const response = await fetch(`https://helpdeskticketingsystem.onrender.com/api/agent/my-tickets/${selectedTicket.id}/status`, {
         method: 'PUT',
         headers: getAuthHeaders(),
         body: JSON.stringify({ status: newStatus })
@@ -90,7 +90,7 @@ const AgentMyTickets = () => {
     
     try {
       setActionLoading(true);
-      const response = await fetch(`http://localhost:8080/api/agent/my-tickets/${selectedTicket.id}/comment`, {
+      const response = await fetch(`https://helpdeskticketingsystem.onrender.com/api/agent/my-tickets/${selectedTicket.id}/comment`, {
         method: 'POST',
         headers: getAuthHeaders(),
         body: JSON.stringify({ comment: comment.trim() })

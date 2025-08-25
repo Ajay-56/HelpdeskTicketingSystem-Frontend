@@ -27,7 +27,7 @@ const AgentAllTickets = () => {
         if (value) queryParams.append(key, value);
       });
 
-      const response = await fetch(`http://localhost:8080/api/agent/tickets?${queryParams}`, {
+      const response = await fetch(`https://helpdeskticketingsystem.onrender.com/api/agent/tickets?${queryParams}`, {
         headers: getAuthHeaders()
       });
       
@@ -52,7 +52,7 @@ const AgentAllTickets = () => {
   const assignTicketToSelf = async (ticketId) => {
     try {
       setAssigningTicket(ticketId);
-      const response = await fetch(`http://localhost:8080/api/agent/tickets/${ticketId}/assign/self`, {
+      const response = await fetch(`https://helpdeskticketingsystem.onrender.com/api/agent/tickets/${ticketId}/assign/self`, {
         method: 'PUT',
         headers: getAuthHeaders()
       });
