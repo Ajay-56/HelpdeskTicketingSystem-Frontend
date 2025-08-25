@@ -105,6 +105,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./auth/AuthContext";
 import Login from "./components/Login";
+import "./mobile-fixes.css";
 import Register from "./components/Register";
 
 // Admin Components

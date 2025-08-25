@@ -1,0 +1,46 @@
+/* mobile-fixes.css */
+@media (max-width: 768px) {
+  /* Make tables scrollable */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent text from overflowing */
+  .table td, .table th {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  /* Fix modal width on small screens */
+  .modal-dialog {
+    max-width: 95% !important;
+    margin: auto;
+  }
+
+  /* Sidebar adjustments */
+  .bg-dark {
+    width: 100% !important;
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  /* Improve button spacing */
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  /* Reduce padding in cards */
+  .card-body {
+    padding: 12px;
+  }
+
+  /* Ensure dropdowns fit screen */
+  .dropdown-menu {
+    max-width: 95vw;
+    word-wrap: break-word;
+  }
+}
