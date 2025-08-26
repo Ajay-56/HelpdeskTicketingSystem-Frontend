@@ -1,24 +1,3 @@
-// import React from 'react';
-// import Header from './Header';
-// import HeroSection from './HeroSection';
-// import FeaturesSection from './FeaturesSection';
-// import StatsSection from './StatsSection';
-// import Footer from './Footer';
-
-// const HomePage = () => {
-//   return (
-//     <div className="min-h-screen bg-gray-50">
-//       <Header />
-//       <HeroSection />
-//       <FeaturesSection />
-//       <StatsSection />
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default HomePage;
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NewAnimatedBackground from './NewAnimatedBackground';
@@ -37,17 +16,18 @@ const HomePage = () => {
         }}>
           <div className="container">
             <Link className="navbar-brand d-flex align-items-center" to="/">
-              <div className="me-3" style={{
-                width: '50px',
-                height: '50px',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                borderRadius: '12px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 4px 16px rgba(102, 126, 234, 0.3)'
-              }}>
-                <span style={{ color: 'white', fontWeight: 'bold', fontSize: '20px' }}>HD</span>
+              <div className="me-3">
+                <img 
+                  src="/Logo.png"  // ✅ change if logo file is logo.svg / logo.ico
+                  alt="HelpDesk Logo"
+                  style={{
+                    width: "50px",
+                    height: "50px",
+                    borderRadius: "12px",
+                    boxShadow: "0 4px 16px rgba(102, 126, 234, 0.3)",
+                    objectFit: "cover"
+                  }}
+                />
               </div>
               <span className="fw-bold fs-4" style={{ color: '#2d3748' }}>
                 HelpDesk Ticketing System
