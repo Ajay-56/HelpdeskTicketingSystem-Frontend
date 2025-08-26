@@ -1,46 +1,74 @@
 /* mobile-fixes.css */
+
+/* General mobile rules */
 @media (max-width: 768px) {
-  /* Make tables scrollable */
+  /* Fix sidebar */
+  .bg-dark {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 220px !important;
+    height: 100%;
+    z-index: 1050;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .bg-dark.d-block {
+    transform: translateX(0);
+  }
+
+  /* Adjust main content when sidebar is open */
+  .flex-fill {
+    margin-left: 0 !important;
+  }
+
+  /* Tables */
   .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-
-  /* Prevent text from overflowing */
   .table td, .table th {
     white-space: nowrap;
     font-size: 14px;
   }
 
-  /* Fix modal width on small screens */
+  /* KPI Cards / Stats */
+  .col-md-6, .col-xl-3, .col-lg-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Filters / Forms */
+  .form-select, .form-control {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* Buttons */
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  /* Modal responsiveness */
   .modal-dialog {
     max-width: 95% !important;
-    margin: auto;
+    margin: 10px auto;
   }
 
-  /* Sidebar adjustments */
-  .bg-dark {
-    width: 100% !important;
-    position: fixed;
-    z-index: 1000;
-    height: 100%;
-    overflow-y: auto;
-  }
-
-  /* Improve button spacing */
-  .btn {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  /* Reduce padding in cards */
-  .card-body {
-    padding: 12px;
-  }
-
-  /* Ensure dropdowns fit screen */
+  /* Dropdown menu fix */
   .dropdown-menu {
     max-width: 95vw;
     word-wrap: break-word;
+  }
+
+  /* Reduce card padding */
+  .card-body {
+    padding: 12px !important;
+  }
+
+  /* Header shrink */
+  .navbar .navbar-brand {
+    font-size: 16px !important;
   }
 }
